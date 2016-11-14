@@ -1,21 +1,23 @@
-/* tslint:disable no-console jsx-no-lambda */
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import TagInput from './component/TagInput';
+import TagInput from './../../src/TagInput';
 
 const allTag = [
     'JavaScript',
     'HTML',
     'CSS',
+    'C',
+    'C++',
+    'C#',
     'Java',
     'PHP',
+    'Objective-C',
     'Ruby',
     'Python',
     'Swift',
     'Go',
     'R',
     'XML',
-    'Lisp',
 ];
 
 function suggest(text: string, list: string[]) {
@@ -44,9 +46,7 @@ class App extends React.Component<{}, State> {
         super();
         this.state = {
             inputText: '',
-            taglist: [
-                'HTML',
-            ],
+            taglist: [],
             suggestionList: [],
         };
     }
@@ -61,7 +61,7 @@ class App extends React.Component<{}, State> {
 
     render() {
         const props = {
-            placeholder: this.state.taglist.length < 1 ? 'taginput' : '',
+            placeholder: this.state.taglist.length < 1 ? 'Programming Language' : '',
             value: this.state.inputText,
             taglist: this.state.taglist,
             onChange: this.handleChange,
@@ -75,7 +75,6 @@ class App extends React.Component<{}, State> {
         );
     }
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
     ReactDOM.render(<App />, document.querySelector('#app'));

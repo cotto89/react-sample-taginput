@@ -3,9 +3,9 @@ import * as ReactDOM from 'react-dom';
 import AutosizeInput = require('react-input-autosize');
 
 export const util = {
-    unique<T>(list?: T[]): T[] {
+    unique<T>(list: T[]): T[] {
         const uniqueList = new Set(list);
-        return [...uniqueList];
+        return Array.from(uniqueList);
     },
 };
 

@@ -41,11 +41,9 @@
   "license": "MIT",
   "scripts": {
     "build": "npm-run-all build:*",
-    "build:src": "tsc",
+    "build:demo": "NODE=ENV=production webpack -p",
     "clean": "npm-run-all clean:** -p",
-    "clean:dist": "rimraf ./dist",
-    "clean:public": "rimraf ./public",
-    "clean:public:bundle": "rimraf ./public/**/bundle.**",
+    "clean:demo": "rimraf ./docs/demo/**/bundle.**",
     "lint": "tslint src/**/*.ts",
     "start": "webpack-dev-server",
     "test": "NODE_ENV=test mocha"

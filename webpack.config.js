@@ -16,10 +16,10 @@ console.info(`
 
 let config = {
     entry: {
-        index: ['./src/index.tsx', './src/index.scss']
+        index: ['./docs/demo/index.tsx', './docs/demo/index.scss']
     },
     output: {
-        path: './public',
+        path: './docs/demo',
         filename: '[name].bundle.js'
     },
     module: {
@@ -42,7 +42,7 @@ let config = {
         }
     },
     resolve: {
-        extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
+        extensions: ['', '.ts', '.tsx', '.js']
     },
     plugins: [
         new WebpackNotifierPlugin({ title: 'Webpack' }),
@@ -54,7 +54,7 @@ let config = {
         new ExtractTextPlugin('[name].bundle.css'),
         new HtmlWebpackPlugin({
             hash: true,
-            template: './src/index.html'
+            template: './docs/demo/index.html'
         })
     ]
 };
@@ -63,7 +63,7 @@ if (isDev) {
     config = merge(config, {
         devtool: 'inline-source-map',
         devServer: {
-            contentBase: 'public',
+            contentBase: './docs/demo',
             inline: true,
             noInfo: true
         }

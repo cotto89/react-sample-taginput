@@ -4,7 +4,7 @@
     "typescript.tsdk": "./node_modules/typescript/lib",
     "files.exclude": {
         "**/dist/**": false,
-        "**/**bundle.**/**": true,
+        "**/**bundle.**/**": false,
         "node_modules": true,
         "typings": false,
         "**/*.d.ts": false
