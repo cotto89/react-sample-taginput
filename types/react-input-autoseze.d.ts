@@ -1,4 +1,3 @@
-// import * as React from '@types/react'
 declare module "react-input-autosize" {
     interface Props {
         className?: string;

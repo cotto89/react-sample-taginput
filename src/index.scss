@@ -1,0 +1,64 @@
+body {
+    margin: 30px;
+
+    background: #f8f8f8;
+}
+
+.ReactTagInput {
+    padding: 2px;
+
+    border: solid 1px #e8e8e8;
+    background: #fff;
+}
+
+.Taglist {
+    display: flex;
+}
+
+.AutosizeInput > input {
+    font-size: inherit;
+
+    height: 100%;
+
+    border-width: 0;
+    background: none;
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.Tag {
+    margin: 2px 4px;
+    padding: 2px 4px;
+
+    color: #fff;
+    background: #2a76de;
+}
+
+.SuggestionList {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    border: solid 1px #ccc;
+    background: #fff;
+}
+
+.SuggestionList__item {
+    font-size: 14px;
+
+    display: list-item;
+
+    padding: 3px 5px;
+}
+
+.SuggestionList__item + .SuggestionList__item {
+    border-top: 1px dotted #e8e8e8;
+}
+
+.SuggestionList__item--current {
+    background: #dcf3ff;
+}
