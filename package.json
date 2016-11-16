@@ -43,7 +43,7 @@
     "build": "npm-run-all build:*",
     "build:demo": "NODE=ENV=production webpack -p",
     "clean": "npm-run-all clean:** -p",
-    "clean:demo": "rimraf ./docs/demo/**/bundle.**",
+    "clean:demo": "rimraf ./docs/demo/**/*bundle.**",
     "lint": "tslint src/**/*.ts",
     "start": "webpack-dev-server",
     "test": "NODE_ENV=test mocha"

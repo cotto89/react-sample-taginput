@@ -54,7 +54,7 @@ let config = {
         new ExtractTextPlugin('[name].bundle.css'),
         new HtmlWebpackPlugin({
             hash: true,
-            template: './docs/demo/index.html'
+            template: 'template.html'
         })
     ]
 };
